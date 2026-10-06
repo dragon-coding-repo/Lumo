@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net9.0-windows</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <!-- UseWPF 是为了拿到 System.Windows.Automation（UIAutomationClient）。
+         程序本身一行 WPF 都没用，但框架程序集属于同一个 WindowsDesktop 包。 -->
+    <UseWPF>true</UseWPF>
+    <EnableWindowsTargeting>true</EnableWindowsTargeting>
+    <AssemblyName>Lumo</AssemblyName>
+    <RootNamespace>Lumo.App</RootNamespace>
+    <ApplicationHighDpiMode>PerMonitorV2</ApplicationHighDpiMode>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <Product>Lumo 翻译</Product>
+    <Company>Lumo</Company>
+    <Description>轻量级 Windows 翻译工具</Description>
+    <Copyright>MIT</Copyright>
+    <Version>1.0.0</Version>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <FileVersion>1.0.0.0</FileVersion>
+    <ApplicationIcon>../../assets/lumo.ico</ApplicationIcon>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="../Lumo.Core/Lumo.Core.csproj" />
+  </ItemGroup>
+
+</Project>
